@@ -27,6 +27,11 @@ jobs:
             key: ${{ secrets.SSH_PRIVATE_KEY }}
             script: |
               ls
+              cd /home/ubuntu/testt
+              pwd
+              cd /home/ubuntu/testt/online_shop_server_-_ci-cd
+              ls
+              sudo git pull
 #               cd /home/ubuntu/ggg/test_git_action
 #               ls
 #               pwd
