@@ -1,15 +1,42 @@
 version: "1"
 services:
 
-  redis: 
-    image: 'redis:alpine'
-    container_name: redis_c
-  
+  redis1:
+    image: redis
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - 6379:6379
+    volumes:
+      - .db:/data
+    restart: always
+    entrypoint: redis-server --appendonly yes
 
   myapp:
+    image: express-app
     build: ./myapp
+    depends_on:
+      - redis1
+    environment:
+      - TEST_NUMBER=${TTT}
+      - S3_ID=${S3_ID}
+      - S3_PASSWORD=${S3_PASSWORD}
+      - S3_BUCKET=${S3_BUCKET}
+      - S3_REGION=${S3_REGION}
+      - RDS_USER=${RDS_USER}
+      - RDS_PASSWORD=${RDS_PASSWORD}
+      - RDS_HOST=${RDS_HOST}
+      - RDS_DATABASE=${RDS_DATABASE}
+      - JWT_SECURITYKEY=${JWT_SECURITYKEY}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - FACEBOOK_CLIENT_ID=${FACEBOOK_CLIENT_ID}
+      - FACEBOOK_CLIENT_SECRET=${FACEBOOK_CLIENT_SECRET}
+
+
+
     container_name: myapp_web
     ports:
-      - "8813:5000"
-    depends_on:
-      - redis
+      - "8812:5000"
