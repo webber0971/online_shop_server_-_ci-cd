@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOOM!</title>
+  <link rel="stylesheet" href="/stylesheets/video.css">
+</head>
+<body>
+  {{!-- <div id="room_number">{{ROOM_ID}}</div> --}}
+    {{!-- <script src="http://localhost:3000/socket.io/socket.io.js"></script> --}}
+  <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+  {{!-- <script src="http://test8812.foodpass.club/socket.io/socket.io.js"></script> --}}
+  <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+
+  <div class="layout">
+    {{!-- <div style="display:none"> --}}
+    <div>
+      <div id="room_number" class="room_number">ROOM NAME : {{ROOM_ID}} ,分享網址即可邀請好友加入視訊聊天</div>
+    </div>
+    <div class="friends_video_container">
+      <div id="room_id" data-id="{{room_id}}"></div>
+      <div class="container">
+        <div class="video-container"></div>
+      </div>
+    </div>
+    <div class="my_video_layout">
+      <div id="video_button" class="button_bar">
+        <img class="video_button_open" width="70px" height="70px" src="/images/icons8-video-call-60.png">
+        <img class="video_button_close" width="70px" height="70px" src="/images/icons8-no-video-40.png">
+      </div>
+      <div id="mic_button" class="button_bar">
+        <img class="mic_button_open" width="80px" height="80px" src="/images/icons8-mic-67.png">
+        <img class="mic_button_close" width="80px" height="80px" src="/images/icons8-mic-close-67.png">
+      </div>
+      <div id="hang_up_button" class="button_bar"><img width="70px" height="70px" src="/images/icons8-call-disconnected-50.png"></div>
+      <div class="my_video_container"></div>
+    </div>
+    
+  </div>
+  <script src="/javascripts/video_room.js"></script>
+</body>
+</html>

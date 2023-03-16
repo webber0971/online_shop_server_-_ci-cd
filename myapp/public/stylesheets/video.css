@@ -1,0 +1,93 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: antiquewhite;
+    height: 100%;
+    background-color: rgb(22, 0, 82);
+    ;
+}
+
+.my_video_layout {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* 水平置中 */
+    justify-content: center;
+    /* 垂直置中 */
+    align-items: center;
+}
+
+.friends_video_container {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 95%;
+    width: 100%;
+}
+
+.container {
+    border-radius: 10px;
+    position: relative;
+    height: 100%;
+}
+
+.friend_video {
+    position: relative;
+}
+
+.layout {
+    height: 95%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0.005fr 10fr 1fr;
+    row-gap: 10px;
+}
+
+.room_number {
+    text-align: center;
+}
+
+.friend_video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.button_bar {
+    cursor: pointer;
+    margin: 10px;
+}
+
+.my_video_container {
+    margin-left: 10px;
+}
+
+
+.video_button_open {
+    display: block;
+}
+
+.video_button_close {
+    display: none;
+}
+
+.mic_button_open {
+    display: block;
+}
+
+.mic_button_close {
+    display: none;
+}
+
+img {
+    transform: scale(1, 1);
+    transition: all 0.5s ease-out;
+}
+
+img:hover {
+    transform: scale(1.2, 1.2);
+}

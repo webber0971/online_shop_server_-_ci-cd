@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/users_chat_page.css' />
+    <title>users_chat_page</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    {{!-- <script src="http://localhost:3000/socket.io/socket.io.js"></script> --}}
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    {{!-- <script src="http://test8812.foodpass.club/socket.io/socket.io.js"></script> --}}
+    <div class="chat_page_layout">
+        <div class="function_selector_box">
+            <img class="chat_room_selector_init" id="go_to_chat_room_list_button" src="/images/char_room_init.png" height="50" width="50">
+            <img class="chat_room_selector_init" id="add_friend_button" src="/images/add_friend-64.png" height="45" width="45">
+        </div>
+        <div class="add_friend_box" style="display: none;">
+            <div>
+                <form id="add_friend_form" action="">
+                    <div class="add_friend_form_title" style="text-align: center;">請輸入好友 ID :</div>
+                    <div>
+                        <input type="text" placeholder="這邊輸入id" id="add_friend_id_input" class="add_friend_id_input">
+                        <input type="submit" placeholder="這邊輸入id" id="add_friend_submit_button" class="add_friend_submit_button">
+                    </div>
+                    <div id="add_friend_result" class="add_friend_result" style="text-align: center;"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="client_list_box">            
+            <div class="top_bar">
+                <ul class="drop-down-menu">
+	                <li><a id="filter_show_text" href="#">全部</a>
+                        <ul class="list">
+                            <li id="filter_all"> <a href="#">全部</a></li>                         
+                            <li id="filter_unread"><a href="#">未讀</a></li>                       
+                            <li id="filter_pending"><a href="#">待處理</a></li>                                
+                            <li id="filter_processed"><a href="#">處理完畢</a></li>
+                            {{!-- <li><a href="#">垃圾訊息</a></li>      --}}
+                        </ul>
+                    </li>
+	            </ul>
+                <input type="text" id="selector_list_search" placeholder="搜尋" class="client_search_input">
+            </div>
+            <div class="client_selector_list"></div>
+            
+        </div>
+        <div class="users_chat_room_box">
+            <div class="users_chat_room_box_top_bar">
+                <div class="client_name_box"></div>
+                {{!-- <div class="pending" id="search_history_text_button"><img src="/images/search_icon.png" height="10" width="10">搜尋</div> --}}
+                <div class="pending" id="processed_selector"><img src="/images/finish_icon.png" height="10" width="10">處理完畢</div>
+                <div class="pending" id="pending_selector"><img src="/images/pending_icon.png" height="10" width="10">待處理</div>
+            </div>
+            <div class="users_chat_room_box_content_layout">
+                <div class="users_chat_room_box_content">
+                    <div class="init_chat_message"> <img class="init_chat_message_img" src="/images/icons8-staff-100.png" height="200" width="200"></div>
+                    
+                </div>
+            </div>
+
+            <div class="users_chat_room_box_mid_bar">
+                <div class="chat_phone"><img id="phone_call_button" src="/images/chat_phone.png" height="25" width="25"></div>
+            </div>
+            <div class="users_chat_room_box_form">
+                <form id="form" action="">
+                <input id="input" autocomplete="off" /><button class="send_message_button_in_users_chat_page">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/users_chat_page.js"></script>
+</body>
+
+</html>
