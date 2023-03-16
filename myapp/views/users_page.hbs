@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/user_page.css' />
+    <title>users_page</title>
+</head>
+<body>
+    <div class="user_page_layout">
+        <div class="user_page_selector">
+            <div class="check_order_list_selector">
+                <div>
+                    <div class="check_order_list_icon"> <img src="/images/icons8-business-report-100.png" height="100%" width="100%"></div>
+                    <div class="check_order_list_text">查看訂單</div>
+                </div>
+            </div>
+            <div class="chat_with_client_selector">
+                <div>
+                    <div class="chat_with_client_icon"><img src="/images/icons8-chat-room-64.png" height="100%" width="100%"></div>
+                    <div class="check_order_list_text">聊天室</div>
+                </div>
+            </div>
+            <div class="upload_new_products_selector">
+                <div>
+                    <div class="upload_new_products_icon"><img src="/images/icons8-product-64.png" height="100%" width="100%"></div>
+                    <div class="check_order_list_text">更改品項狀態</div>
+                </div>
+            </div>
+            <div class="staff_upload_schedule_selector">
+                <div>
+                    <div class="staff_upload_schedule_icon"><img src="/images/icons8-staff-100.png" height="100%" width="100%"></div>
+                    <div class="check_order_list_text">員工進度回報</div>
+                </div>
+            </div>
+        </div>
+        <div class="user_page_information_layout">
+            {{!-- 查看訂單 --}}
+            <div class="check_bill_list_page">
+
+                <span class="show_bill_list">訂單列表</span>
+                <span class="product_quantity_list">銷售統計</span>
+
+
+                <div class="check_bill_list_page_box">
+                    <div class="check_bill_list_page_title">
+                        <div>訂單編號</div>
+                        <div>訂單內容</div>
+                        <div>金額</div>
+                        <div>狀態</div>
+                    </div>
+                    <div class="check_bill_list_page_info"></div>
+                </div>
+
+                {{!-- 銷售統計 --}}
+                <div class="selling_chart">
+                    <canvas class="my_chart"></canvas>
+                </div>
+            </div>
+
+
+
+            {{!-- 更改商品狀態 --}}
+            <div class="upload_and_delete_new_products">
+                <div>
+                    <div class="center">
+                        <h1>上傳新商品</h1>
+                        <form>
+                            <img id="preview" width="250" height="200" border="0" style="vertical-align:top;-o-object-fit: cover;"/>
+                            <input id="file-uploader" name="demo" type="file" accept="image/*" style="width:100px;vertical-align:top" />
+                            <div class="inputbox">
+                                <input id="upload_product_name" type="text" required="required" background-color="#ffffff">
+                                <span>商品名稱</span>
+                            </div>
+                            <div class="inputbox">
+                                <input id="upload_product_price" type="text" required="required">
+                                <span>金額</span>
+                            </div>
+                            <select id="upload_product_status" class="upload_product_status">
+                                <option>選擇商品狀態</option>
+                                <option>上架中</option>
+                                <option>下架</option>
+                                <option>待上架</option>
+                                <option>售完</option>
+                                <option>缺貨</option>
+                            </select>
+                            <div class="inputbox">
+                                <input id="submitMessage" type="button" value="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <div class="center">
+                        <h1>更新商品狀態</h1>
+                        <form>
+                            <div class="inputbox">
+                            <input id="update_product_id" type="text" required="required">
+                            <span>商品編號</span>
+                            </div>
+                            <select id="update_product_status" class="update_product_status">
+                                <option>選擇商品狀態</option>
+                                <option>上架中</option>
+                                <option>下架</option>
+                                <option>待上架</option>
+                                <option>售完</option>
+                                <option>缺貨</option>
+                            </select>
+                            <div class="inputbox">
+                            <input id="submit_update_product_info" type="button" value="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {{!-- 員工進度回報 --}}
+            <div class="staff_report">
+                <span class="staff_report_unfinished_bill_selector">未完成訂單列表</span>
+                <span class="staff_report_finished_bill_selector">已完成訂單列表</span>
+                <div class="staff_bill_list_page_box">
+                    <div class="staff_report_page_title">
+                        <div>訂單編號</div>
+                        <div>訂單內容</div>
+                        <div>金額</div>
+                        <div>狀態</div>
+                        <div></div>
+                    </div>
+                        <div class="staff_report_unfinished_bill_list_info"></div>
+                        <div class="staff_report_finished_bill_list_info"></div>                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="/javascripts/users_page_draw_chart.js"></script>
+    <script src="/javascripts/users_page_check_bill_list_control.js"></script>
+    <script src="/javascripts/user_page_check_bill_list_html.js"></script>    
+    <script src="/javascripts/users_page_staff_report_html.js"></script>
+    <script src="/javascripts/users_page_upload_products_control.js"></script>
+    <script src="/javascripts/users_page_control.js"></script>
+    <script src="/javascripts/users_page_staff_report_control.js"></script>
+    
+</body>
+</html>

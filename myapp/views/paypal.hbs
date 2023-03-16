@@ -1,0 +1,72 @@
+<div id="loading-wrapper1" class="loading-wrapper thankPageInit">
+    <div style="color: #64d6e2" class="loading la-line-scale la-2x">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<div id="loading-wrapper" class="loading-wrapper">
+    <div style="color: #64d6e2" class="loading la-line-scale la-2x">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div id="bookingMemberInfo" class="bookingMemberInfo">
+    <div class="bookingMemberInfoLeft"></div>
+    <div class="bookingMemberInfoMid">
+        <div class="bookingMemberInfoTitle">您的聯絡資訊</div>
+        <form style="margin-left: 10%;margin-right: 10%;">
+            聯絡姓名 : <input id="userName" class="bookingUserInfoInput" type="text" width="100px" autocomplete="off"><br>
+            聯絡信箱 : <input id="userEmail" class="bookingUserInfoInput" type="text" width="100px" autocomplete="off"><br>
+            手機號碼 : <input id="userPhoneNumber" class="bookingUserInfoInput" type="text" width="100px" autocomplete="off"><br>
+            <a>請保持手機暢通，準時到達，導覽人員將用手機與您聯繫，務必留下正確的聯絡方式。</a>
+        </form>
+        <hr class="hrColor">
+    </div>
+    <div class="bookingMemberInfoRight"></div>
+</div>
+<div id="bookingCreditInfo" class="bookingMemberInfo">
+    <div class="bookingMemberInfoLeft"></div>
+    <div class="bookingMemberInfoMid">
+        <div class="bookingCreditInfo">信用卡付款資訊</div>
+        <form style="margin-left: 10%;margin-right: 10%;">
+            <div style="display:flex; align-items: center;">
+                <div style="display: inline-block; ">卡片號碼 : </div>
+                <div id="card-number" style="display: inline-block; padding: 5px;height: 20px; border-style: solid; border-radius: 5px;border-width: 1px;margin: 2px;width: 200px;"></div>
+            </div>
+            <div style="display:flex; align-items: center;">
+                過期時間 : <div id="tappay-expiration-date"  style="display: inline-block; padding: 5px;height: 20px; border-style: solid;border-radius: 5px;border-width: 1px;margin: 2px;width: 200px;" type="text" width="100px"></div>
+            </div>
+            <div style="display:flex; align-items: center;">
+                卡片後三碼 : <div id="tappay-cvv"  style="display: inline-block; padding: 5px;height: 20px; border-style: solid;border-radius: 5px;border-width: 1px;margin: 2px;width: 200px;" type="text" width="100px" ></div>
+            </div>
+        </form>
+    </div>
+    <div class="bookingMemberInfoRight"></div>
+</div>
+<hr id="hr1" class="hrColor">
+<div id="bookingEndInfo" class="bookingEndInfo">
+    <div class="bookingMemberInfoLeft"></div>
+    <div class="bookingEndMid">
+        <div></div>
+        <div class="bookingEndMidInfo">
+            <div>總金額 : <a id="allPriceText"></a></div>
+            <div>
+                <form>
+                    <input id="submitPayment" type="submit" value="確認訂購並付款" class="bookingSubmitButton"></div>
+                </form>
+        </div>
+    </div>
+    <div class="bookingMemberInfoRight"></div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://js.tappaysdk.com/sdk/tpdirect/v5.14.0"></script>
+<script src="/javascripts/paypal.js"></script>

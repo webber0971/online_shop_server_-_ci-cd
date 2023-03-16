@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/client_chat_room.css' />
+    <link rel='stylesheet' href='/stylesheets/entrance_page.css' />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville">
+    <link rel="icon" href="https://d3ce9biuqz84nv.cloudfront.net/online-shop.ico" type="image/x-icon" />
+  </head>
+  <body>
+    {{!-- 顧客聊天室按鈕 --}}
+    {{!-- <script src="http://test8812.foodpass.club/socket.io/socket.io.js"></script> --}}
+    {{!-- <script src="/socket.io/socket.io.js"></script> --}}
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <div class="client_connect_to_server"></div>
+    <script src="/javascripts/build_client_chat_room.js"></script>
+    <div id="backgroundFilter" class="backgroundFilter"></div>
+    {{!-- <div class="wrap"> --}}
+    <div class="container">
+      <div class="header wrap" id="header_wrap">
+        <script src="/javascripts/build_layout.js"></script>
+      </div>
+
+      <div class="content">
+        <div></div>
+        <div>
+          <div class="account"></div>
+          {{!-- 建立會員登入頁面 --}}
+          <script src="/javascripts/build_account_page.js"></script>
+          <div class="content_mid">
+            {{{body}}}
+          </div>
+
+        </div>
+        <div></div>
+      </div>
+      {{!-- <div class="footer_github_linkin">Copyright ©2023 webber0971-project 
+        <a href="https://github.com/webber0971/online_shop"><img class="footer_icon" src="https://d3ce9biuqz84nv.cloudfront.net/github-512.webp"></a>
+        <a href="https://github.com/webber0971/online_shop"><img class="footer_icon" src="https://d3ce9biuqz84nv.cloudfront.net/LinkedIn_icon_circle.svg.png"></a>
+        
+      </div> --}}
+      {{!-- <div class="footer">
+      </div> --}}
+    </div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1247016612579120',
+          cookie     : true,
+          xfbml      : true,
+        });
+          
+        FB.AppEvents.logPageView();   
+      };
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <script src="/javascripts/entrance_page.js"></script>
+  </body>
+</html>
