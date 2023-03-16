@@ -15,7 +15,7 @@ services:
     entrypoint: redis-server --appendonly yes
 
   myapp:
-    image: express-app
+    # image: express-app
     build: ./myapp
     depends_on:
       - redis1
