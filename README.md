@@ -35,7 +35,29 @@
 <h3 id ="System_Design">System Design</h3>
 <img width="100%" alt="pipline" src="https://user-images.githubusercontent.com/101098094/226040302-bea348f7-6798-4be7-9d4c-c0031bc2ccfb.png">
 <h3 id ="Communication">Communication</h3>
+
 <h2 id ="Backend_Technique">Backend Technique</h2>
+<h3 id ="Key_Points">Key_Points</h3>
++ MVC pattern
++ Websocket
++ peerjs
+<h3 id ="Infrastructure">Infrastructure</h3>
++ Docker-compose
+<h3 id ="Environment">Environment</h3>
++ Node.js/Express.js
+<h3 id ="Database">Database</h3>
++ AWS RDS(mysql)
+<h3 id ="Database_Schema">Database_Schema</h3>
+<h3 id ="Networking">Networking</h3>
++ HTTP & HTTPS
++ Domain Name System (DNS)
++ SSL (sslforfree)
++ NGINX
++ Docker
+<h3 id ="Unit_Test">Unit_Test</h3>
+
+
+
 <h2 id ="Frontend_Technique">Frontend Technique</h2>
 <h2 id ="Cloud_Services">Cloud Services</h2>
 <h2 id ="Version_Control">Version Control</h2>
