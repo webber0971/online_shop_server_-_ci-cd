@@ -1,14 +1,10 @@
-# online_shop_server_-_ci-cd
-# Foobar
+# online shop with chat room and video call
 
-Foobar is a Python library for dealing with word pluralization.
++ demo website: https://test8812.foodpass.club/entrance
++ test account and password 
+   (clinet -- account : customer1 , password : customer1)
+   (owner -- account : admin , password : admin)
 
-## Installation
+## catalogue
++ 
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
-
-## Usage
