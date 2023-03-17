@@ -29,6 +29,8 @@ services:
     image: express-app
     build: ./myapp
     container_name: myapp_c
+    ports:
+      - "8812:5000"    
     depends_on:
       - redis1
     environment:
@@ -46,9 +48,3 @@ services:
       - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
       - FACEBOOK_CLIENT_ID=${FACEBOOK_CLIENT_ID}
       - FACEBOOK_CLIENT_SECRET=${FACEBOOK_CLIENT_SECRET}
-
-
-
-    container_name: myapp_web
-    ports:
-      - "8812:5000"
