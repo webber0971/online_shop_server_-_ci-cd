@@ -6,7 +6,13 @@
   - (owner -- account : admin , password : admin)
   
   
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://d3ce9biuqz84nv.cloudfront.net/client_buy_flow.gif)
+
+llll
+https://d3ce9biuqz84nv.cloudfront.net/client_buy_flow.gif
+https://d3ce9biuqz84nv.cloudfront.net/real_time_text_message.gif
+https://d3ce9biuqz84nv.cloudfront.net/user_page.gif
+https://d3ce9biuqz84nv.cloudfront.net/video_call.gif
 
 ## catalogue
 - [Feature](#Feature)
@@ -38,30 +44,56 @@
 
 <h2 id ="Backend_Technique">Backend Technique</h2>
 <h3 id ="Key_Points">Key_Points</h3>
-+ MVC pattern
-+ Websocket
-+ peerjs
+<ul>
+  <li>MVC pattern</li>
+  <li>Websocket</li>
+  <li>peerjs</li>  
+</ul>
+
 <h3 id ="Infrastructure">Infrastructure</h3>
-+ Docker-compose
+<ul>
+  <li>Docker-compose</li>  
+</ul>
 <h3 id ="Environment">Environment</h3>
-+ Node.js/Express.js
+<ul>
+  <li>Node.js/Express.js</li>  
+</ul>
 <h3 id ="Database">Database</h3>
-+ AWS RDS(mysql)
+<ul>
+  <li>AWS RDS(mysql)</li>  
+</ul>
 <h3 id ="Database_Schema">Database_Schema</h3>
 <h3 id ="Networking">Networking</h3>
-+ HTTP & HTTPS
-+ Domain Name System (DNS)
-+ SSL (sslforfree)
-+ NGINX
-+ Docker
+<ul>
+  <li>HTTP & HTTPS</li>
+  <li>Domain Name System (DNS)</li>
+  <li>SSL (sslforfree)</li>  
+  <li>NGINX</li>  
+  <li>Docker</li>  
+</ul>
 <h3 id ="Unit_Test">Unit_Test</h3>
 
 
 
 <h2 id ="Frontend_Technique">Frontend Technique</h2>
+
 <h2 id ="Cloud_Services">Cloud Services</h2>
+<ul>
+  <li>AWS EC2 : Backend host machine</li>
+  <li>AES S3 : Store images and videos</li>
+  <li>AWS cloudfront : Speeds up distribution of images and videos in S3</li>
+  <li>AWS RDS : Store data,including chat history,member information and products information</li>
+</ul>
+
 <h2 id ="Version_Control">Version Control</h2>
+<ul>
+  <li>Git/Github</li>  
+</ul>
+
 <h2 id ="CICD">CICD</h2>
+<ul>
+  <li>Git Action</li>  
+</ul>
 <h2 id ="API_Doc">API Doc</h2>
 <h2 id ="Contact">Contact</h2>
 
