@@ -17,10 +17,10 @@ services:
 
 
   websocket_server:
-    build: ./chat_server_websocket
+    build: ./chat_server_webscoket
     container_name: websocket_c
     ports:
-      -"3000:3000"
+      - "3000:3000"
     depends_on:
       - redis1
   

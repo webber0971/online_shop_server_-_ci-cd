@@ -16,7 +16,7 @@ RUN npm install
 COPY . /usr/src/webserver
 
 #open container port 8000
-# EXPOSE 8812
+EXPOSE 8812
 
 # CMD npm start
 CMD [ "npm","start" ]
