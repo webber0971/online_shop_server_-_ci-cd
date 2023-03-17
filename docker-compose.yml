@@ -3,6 +3,7 @@ services:
 
   redis1:
     image: redis
+    container_name: redis_c
     environment:
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
@@ -14,9 +15,20 @@ services:
     restart: always
     entrypoint: redis-server --appendonly yes
 
+
+  websocket_server:
+    build: ./chat_server_websocket
+    container_name: websocket_c
+    ports:
+      -"3000:3000"
+    depends_on:
+      - redis1
+  
+
   myapp:
-    # image: express-app
+    image: express-app
     build: ./myapp
+    container_name: myapp_c
     depends_on:
       - redis1
     environment:
