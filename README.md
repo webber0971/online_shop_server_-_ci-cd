@@ -6,7 +6,7 @@
   - (owner -- account : admin , password : admin)
 
 ## catalogue
-+ feature(##feature)
+- feature(##feature)
 
 
 
