@@ -32,11 +32,8 @@
 
 <h2 id ="Feature">Feature</h2>
 <h2 id ="System_Architecture">System Architecture</h2>
-<img width="100%" alt="pipline" src="https://user-images.githubusercontent.com/101098094/226040302-bea348f7-6798-4be7-9d4c-c0031bc2ccfb.png">
-
-
-
 <h3 id ="System_Design">System Design</h3>
+<img width="100%" alt="pipline" src="https://user-images.githubusercontent.com/101098094/226040302-bea348f7-6798-4be7-9d4c-c0031bc2ccfb.png">
 <h3 id ="Communication">Communication</h3>
 <h2 id ="Backend_Technique">Backend Technique</h2>
 <h2 id ="Frontend_Technique">Frontend Technique</h2>
