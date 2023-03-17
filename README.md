@@ -32,7 +32,7 @@
 
 <h2 id ="Feature">Feature</h2>
 <h2 id ="System_Architecture">System Architecture</h2>
-<img width="487" alt="pipline" src="https://user-images.githubusercontent.com/101098094/226040302-bea348f7-6798-4be7-9d4c-c0031bc2ccfb.png">
+<img width="100%" alt="pipline" src="https://user-images.githubusercontent.com/101098094/226040302-bea348f7-6798-4be7-9d4c-c0031bc2ccfb.png">
 
 
 
