@@ -6,8 +6,7 @@
   - (owner -- account : admin , password : admin)
 
 ## catalogue
-+ feature
-- [第一章](##feature)
++ feature(##feature)
 
 
 
