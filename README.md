@@ -5,7 +5,7 @@
   - (clinet -- account : customer1 , password : customer1)
   - (owner -- account : admin , password : admin)
 
-## catalogue
+##catalogue
 - [Feature](##Feature)
 - [System Architecture](##System_Architecture)
   - [System Design](##System_Design)
@@ -27,5 +27,5 @@
 - [Contact](##Contact)
 
 
-## Feature
+##Feature
 
