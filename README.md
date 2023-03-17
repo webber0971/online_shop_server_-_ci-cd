@@ -8,7 +8,7 @@
 ## catalogue
 - [Feature](##Feature)
 - [System Architecture](##System Architecture)
-  - [System Design](##System Architecture)
+  - [System Design](##System Design)
   - [Communication](##Communication)
 - [Backend Technique](##Backend Technique)
   - [Key Points](##Key Points)
