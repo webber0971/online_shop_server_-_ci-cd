@@ -42,7 +42,7 @@ services:
   websocket_server:
     image: websocket_server_im
     build: ./chat_server_webscoket
-    container_name: websocket_c
+    container_name: websocket_con
     ports:
       - 3001:3001
     depends_on:
