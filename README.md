@@ -6,7 +6,7 @@
   - (owner -- account : admin , password : admin)
   
   
-![This is an image](https://d3ce9biuqz84nv.cloudfront.net/client_buy_flow.gif)
+![](https://d3ce9biuqz84nv.cloudfront.net/client_buy_flow.gif)
 
 llll
 https://d3ce9biuqz84nv.cloudfront.net/client_buy_flow.gif
