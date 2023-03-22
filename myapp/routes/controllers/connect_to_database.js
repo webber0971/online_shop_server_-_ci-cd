@@ -3,8 +3,8 @@ function check_account(connection_pool, email) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗1-1")
+                reject("連線失敗1-2")
             }
             else {
                 sql = "select * from member where email = (?)"
@@ -29,8 +29,8 @@ function build_new_account(connection_pool, name, email, password) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗2")
+                reject("連線失敗2")
             }
             else {
                 sql = "insert into member(name,email,password) values (?)"
@@ -53,8 +53,8 @@ function get_member_info(connection_pool, email) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗3")
+                reject("連線失敗3")
             } else {
                 sql = "select * from member where email = (?)"
                 val = email
@@ -76,8 +76,8 @@ function get_member_info_by_member_id(connection_pool, member_id) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗4")
+                reject("連線失敗4")
             } else {
                 sql = "select member_id,name,chat_status,latest_message_time from member where member_id = (?)"
                 val = member_id
@@ -99,8 +99,8 @@ function check_member_id_exited(connection_pool, member_id) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗5")
+                reject("連線失敗5")
             } else {
                 sql = "select name from member where member_id = (?)"
                 val = member_id
@@ -121,8 +121,8 @@ function get_all_member_chat_info(connection_pool) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗6")
+                reject("連線失敗6")
             } else {
                 sql = "select member_id,name,chat_status,latest_message_time,process_status from member"
                 connection.query(sql, (err, res) => {
@@ -143,8 +143,8 @@ function upload_product(connection_pool, product_name, product_image_url, produc
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗7")
+                reject("連線失敗7")
             } else {
                 sql = "insert into products(product_name,image_url,information) values (?)"
                 val = [product_name, product_image_url, product_information]
@@ -167,8 +167,8 @@ function get_products_information_their_status_is_selling(connection_pool) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗8")
+                reject("連線失敗8")
             } else {
                 console.log("pppppp")
                 sql = "select * from products where status = '上架中' "
@@ -191,8 +191,8 @@ function upload_order_list(connection_pool, member_id, product_id, quantity, bil
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗9")
+                reject("連線失敗9")
             } else {
                 sql = "insert into order_list(member_id,product_id,quantity,bill_number) values (?)"
                 bill_number = 0
@@ -215,8 +215,8 @@ function delete_order_list_by_order_list_id(connection_pool, order_list_id) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗10")
+                reject("連線失敗10")
             } else {
                 sql = "delete from order_list where order_list_id = (?)"
                 bill_number = 0
@@ -239,8 +239,8 @@ function get_order_list_with_memeber_id(connection_pool, member_id) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗11")
+                reject("連線失敗11")
             } else {
                 sql = "select * from order_list where member_id = (?)"
                 bill_number = 0
@@ -265,8 +265,8 @@ function get_order_list_inner_join_products_with_memeber_id_and_bill_number(conn
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗12")
+                reject("連線失敗12")
             } else {
                 sql = "select * from order_list inner join products on order_list.product_id = products.product_id where order_list.member_id = (?) and order_list.bill_number = (?)"
                 val = [member_id, billnumber]
@@ -290,8 +290,8 @@ function get_info_order_list_inner_join_products_with_memeber_id(connection_pool
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗13")
+                reject("連線失敗13")
             } else {
                 sql = "select * from order_list inner join products on order_list.product_id = products.product_id where order_list.member_id = (?)"
                 bill_number = 0
@@ -314,8 +314,8 @@ function update_bill_number(connection_pool, order_list_id, bill_number) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗14")
+                reject("連線失敗14")
             } else {
                 sql = "update order_list set bill_number = (?) where order_list_id = (?)"
                 val = [bill_number, order_list_id]
@@ -338,8 +338,8 @@ function update_bill_status(connection_pool, bill_number, bill_status) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗15")
+                reject("連線失敗15")
             } else {
                 sql = "update bill_list set bill_status = (?) where bill_number = (?)"
                 val = [bill_status, bill_number]
@@ -361,8 +361,8 @@ function insert_bill_list(connection_pool, bill_number, member_id) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗16")
+                reject("連線失敗16")
             } else {
                 sql = "insert into bill_list(bill_number,member_id) values (?)"
                 val = [bill_number, member_id]
@@ -398,8 +398,8 @@ function get_bill_list(connection_pool, member_id) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗17")
+                reject("連線失敗17")
             } else {
                 sql = "select * from order_list inner join bill_list on order_list.bill_number = bill_list.bill_number  inner join products on order_list.product_id = products.product_id where bill_list.member_id = (?)"
                 bill_number = 0
@@ -422,8 +422,8 @@ function get_all_bill_list(connection_pool) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗18")
+                reject("連線失敗18")
             } else {
                 sql = "select * from order_list inner join bill_list on order_list.bill_number = bill_list.bill_number  inner join products on order_list.product_id = products.product_id"
                 connection.query(sql, (err, res) => {
@@ -443,8 +443,8 @@ function get_chat_message(connection_pool, member_id, get_id) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗19")
+                reject("連線失敗19")
             } else {
                 sql = "select * from chat_message where (send_id = (?) or send_id = (?)) and (get_id = (?) or get_id = (?)) order by message_id asc"
                 val = [member_id, get_id, member_id, get_id]
@@ -468,8 +468,8 @@ function get_all_chat_message(connection_pool) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗20")
+                reject("連線失敗20")
             } else {
                 sql = "select * from chat_message order by message_id desc"
                 connection.query(sql, (err, res) => {
@@ -490,8 +490,8 @@ function get_all_chat_message_by_user_id(connection_pool, user_id) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗21")
+                reject("連線失敗21")
             } else {
                 sql = "select * from chat_message where send_id = (?) or get_id = (?)  order by message_id desc"
                 val = [user_id, user_id]
@@ -514,8 +514,8 @@ function insert_chat_message(connection_pool, send_id, get_id, information, loca
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗22")
+                reject("連線失敗22")
             } else {
                 sql = "insert into chat_message(send_id,get_id,information,date) values (?)"
                 val = [send_id, get_id, information, local_date]
@@ -588,8 +588,8 @@ function insert_new_product(connection_pool, image_url, product_name, product_pr
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗23")
+                reject("連線失敗23")
             } else {
                 sql = "insert into products(product_name,image_url,status,price) values (?)"
                 val = [product_name, image_url, product_status, product_price]
@@ -611,8 +611,8 @@ function update_product_status(connection_pool, prodict_id, product_status) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗24")
+                reject("連線失敗24")
             } else {
                 sql = "update products set status = (?) where product_id = (?)"
                 val = [product_status, prodict_id]
@@ -635,8 +635,8 @@ function update_member_chat_status(connection_pool, send_id, member_chat_status)
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗25")
+                reject("連線失敗25")
             } else {
                 sql = "update member set chat_status = (?) where member_id = (?)"
                 val = [member_chat_status, send_id]
@@ -658,8 +658,8 @@ function update_member_process_status(connection_pool, client_id, process_status
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗26")
+                reject("連線失敗26")
             } else {
                 sql = "update member set process_status = (?) where member_id = (?)"
                 val = [process_status, client_id]
@@ -681,8 +681,8 @@ function update_status_list_process_status(connection_pool, friend_id, user_id, 
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗27")
+                reject("連線失敗27")
             } else {
                 sql = "update status_list set process_status = (?) where get_id = (?) and send_id = (?)"
                 val = [process_status, user_id, friend_id]
@@ -703,8 +703,8 @@ function user_get_all_firends_status(connection_pool, user_id) {
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗28")
+                reject("連線失敗28")
             } else {
                 sql = "select send_id,get_id,read_message_id,unread_message_id,status_list.process_status,latest_time,name from status_list inner join member on status_list.send_id = member.member_id where status_list.get_id = (?) order by status_list.latest_time desc"
                 val = user_id
@@ -727,8 +727,8 @@ function update_read_message_id_in_status_list(connection_pool, friend_id, user_
     return new Promise((resolve, reject) => {
         connection_pool.getConnection((err, connection) => {
             if (err) {
-                console.log("連線失敗")
-                reject("連線失敗")
+                console.log("連線失敗29")
+                reject("連線失敗29")
             } else {
                 sql = "update status_list set read_message_id = (?) where get_id = (?) and send_id = (?)"
                 val = [unread_message_id, user_id, friend_id]
