@@ -15,7 +15,7 @@ var connection_pool = mysql.createPool({
 connection_pool.getConnection((err,connection)=>{
     if(err){
         // 取得可用連線出錯
-        console.log("連線失敗")
+        console.log("連線失敗03")
     }else{
         // 成功取得可用連線
         // 使用取得的連線
