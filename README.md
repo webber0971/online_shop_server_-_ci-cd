@@ -5,12 +5,9 @@
   - (clinet -- account : customer1 , password : customer1)
   - (owner -- account : admin , password : admin)
   
-![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/real_time_text_message.gif)
 ![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/client_1.gif)
-
+![image](https://d3ce9biuqz84nv.cloudfront.net/video_2.gif)
 ![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/userpage_1.gif)
-![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/video_2.gif)
-
 
 ## catalogue
 - [Feature](#Feature)
@@ -35,6 +32,10 @@
 
 
 <h2 id ="Feature">Feature</h2>
++ Real-Time chat and history message
+
+![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/real_2.gif)
+
 <h2 id ="System_Architecture">System Architecture</h2>
 <h3 id ="System_Design">System Design</h3>
 <img width="100%" alt="pipline" src="https://user-images.githubusercontent.com/101098094/226040302-bea348f7-6798-4be7-9d4c-c0031bc2ccfb.png">
