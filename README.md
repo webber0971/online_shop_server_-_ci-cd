@@ -11,8 +11,8 @@
 ![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/real_time_text_message.gif)
 ![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/client.gif)
 
-![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/user_page.gif)
-![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/video_call.gif)
+![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/userpage.gif)
+![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/video-1.gif)
 <video id="video_details" class="video2" autoplay muted controls width="500px" height="260">
     <source src="https://d3ce9biuqz84nv.cloudfront.net/client_buy_flow.mp4" type="video/mp4" />
 </video>
