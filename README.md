@@ -5,9 +5,6 @@
   - (clinet -- account : customer1 , password : customer1)
   - (owner -- account : admin , password : admin)
   
-  
-![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/client_buy_flow.gif)
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 ![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/real_time_text_message.gif)
 ![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/client_1.gif)
 
