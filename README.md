@@ -49,7 +49,8 @@
 <ul>
   <li>MVC pattern</li>
   <li>Websocket</li>
-  <li>peerjs</li>  
+  <li>peerjs</li> 
+  <img width="100%" alt="pipline" src="https://d3ce9biuqz84nv.cloudfront.net/peerjs.png">
 </ul>
 
 <h3 id ="Infrastructure">Infrastructure</h3>
