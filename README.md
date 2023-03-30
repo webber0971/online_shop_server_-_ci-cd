@@ -6,9 +6,6 @@
   - (Owner -- account : admin , password : admin)
   
 ![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/client_1.gif)
-![image](https://d3ce9biuqz84nv.cloudfront.net/video_2.gif)
-![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/userpage_1.gif)
-
 ## catalogue
 - [Feature](#Feature)
 - [System Architecture](#System_Architecture)
@@ -35,6 +32,13 @@
 + Real-Time chat and history message
 
 ![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/real_2.gif)
+
++ Video Call 
+![image](https://d3ce9biuqz84nv.cloudfront.net/video_2.gif)
+
++ user page to update product information and confirm order status
+![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/userpage_1.gif)
+
 
 <h2 id ="System_Architecture">System Architecture</h2>
 <h3 id ="System_Design">System Design</h3>
