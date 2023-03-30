@@ -104,5 +104,3 @@
 <h2 id ="Contact">Contact</h2>
 李緯宸 (wei-chen li)
 Email: webber0971@gmail.com
-
-<h2 id ="Frontend_Technique"> Frontend Technique</h2>
