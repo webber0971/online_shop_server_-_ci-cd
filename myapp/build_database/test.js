@@ -50,7 +50,7 @@ async function get_products_information_their_status_is_selling_1(connect_to_dat
 // connection_pool.getConnection((err,connection)=>{
 //     if(err){
 //         // 取得可用連線出錯
-//         console.log("連線失敗")
+//         console.log("連線失敗05")
 //     }else{
 //         // 成功取得可用連線
 //         // 使用取得的連線

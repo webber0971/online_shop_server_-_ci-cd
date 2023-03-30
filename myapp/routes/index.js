@@ -21,10 +21,23 @@ let upload = multer() //安裝 multer 解析 mutlipart bodies , 數據安裝在 
 const connection_pool = mysql.createPool({
   connectionLimit: 10,
   host: process.env.RDS_HOST,
+  // host: "kekek",
   user: process.env.RDS_USER,
   password: process.env.RDS_PASSWORD,
   database: process.env.RDS_DATABASE
 });
+
+
+get_products_information_their_status_is_selling_1(connect_to_database,connection_pool)
+async function get_products_information_their_status_is_selling_1(connect_to_database,connection_pool) {
+  let all_products_information = await connect_to_database.get_products_information_their_status_is_selling(connection_pool)
+  console.log("取得商品訊息")
+  console.log(all_products_information)
+}
+
+
+
+
 
 console.log(process.env.RDS_HOST)
 
