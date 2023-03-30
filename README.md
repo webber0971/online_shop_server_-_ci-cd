@@ -1,9 +1,9 @@
 # online shop with chat room and video call
 
-+ demo website: https://test8812.foodpass.club/entrance
-+ test account and password 
-  - (clinet -- account : customer1 , password : customer1)
-  - (owner -- account : admin , password : admin)
++ Demo website: https://test8812.foodpass.club/entrance
++ Test Account and Password 
+  - (Clinet -- account : customer1 , password : customer1)
+  - (Owner -- account : admin , password : admin)
   
 ![Alt Text](https://d3ce9biuqz84nv.cloudfront.net/client_1.gif)
 ![image](https://d3ce9biuqz84nv.cloudfront.net/video_2.gif)
