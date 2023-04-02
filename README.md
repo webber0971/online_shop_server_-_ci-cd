@@ -73,6 +73,8 @@
   <li>AWS RDS(mysql)</li>  
 </ul>
 <h3 id ="Database_Schema">Database_Schema</h3>
+<img width="100%" alt="pipline" src="https://d3ce9biuqz84nv.cloudfront.net/datavase_schema.png">
+
 <h3 id ="Networking">Networking</h3>
 <ul>
   <li>HTTP & HTTPS</li>
