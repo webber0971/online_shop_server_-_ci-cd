@@ -108,7 +108,7 @@
 </ul>
 <h2 id ="API_Doc">API Doc</h2>
 
-<a href="https://app.swaggerhub.com/apis/webber0971/kjkj/1.0.0" target="_blank">RESTful API documentation</a>
+<a href="https://app.swaggerhub.com/apis-docs/webber0971/kjkj/1.0.0" target="_blank">RESTful API documentation</a>
 
 <h2 id ="Contact">Contact</h2>
 李緯宸 (wei-chen li)
